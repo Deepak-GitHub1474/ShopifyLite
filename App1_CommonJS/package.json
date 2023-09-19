@@ -1,0 +1,16 @@
+{
+  "name": "product_app",
+  "version": "1.0.0",
+  "description": "rendering product on web page by fetching the product",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.0.1"
+  }
+}

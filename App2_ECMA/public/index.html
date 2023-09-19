@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Server Render Site</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #060012;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #ccc8ec;
+            width: 330px;
+            height: 430px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #0bee31f2;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 10px #00ffff
+        }
+
+        .product-cover {
+            width: 100%;
+            max-height: 200px;
+            border-radius: 10px;
+        }
+
+        .info {
+            position: absolute;
+            top: 15rem;
+            left: 25px;
+            line-height: 1.9rem;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="cover-img">
+            <img src="**cover**" class="product-cover" />
+        </div>
+        <div class="info">
+            <i class="fa-regular fa-heart fa-2x"></i>
+            <h2>**title**</h2>
+            <p>Price: $ **price**</p>
+            <p>Rating **rating**</p>
+        </div>
+    </div>
+
+    <script>
+        let heart = document.querySelector(".fa-heart");
+        heart.onclick = () => {
+            if (heart.classList.contains("fa-regular")) {
+                heart.classList.remove("fa-regular");
+                heart.classList.add("fa-solid");
+                heart.style.color = "red";
+            }
+            else {
+                heart.classList.add("fa-regular");
+                heart.classList.remove("fa-solid");
+                heart.style.color = "black";
+            }
+        };
+    </script>
+</body>
+
+</html>
